@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>PÉNOMBRE</title>
@@ -12,8 +12,9 @@
       padding: 50px; 
     }
 
+    /* Logo */
     h1 img {
-      height: 200px; /* taille du logo */
+      height: 200px;
     }
 
     /* Container pour les sections côte à côte */
@@ -22,11 +23,7 @@
       justify-content: center;
       gap: 50px; /* espace entre les blocs */
       margin-top: 50px;
-      flex-wrap: wrap; /* s’adapte aux petits écrans */
-    }
-
-    .section {
-      text-align: center;
+      flex-wrap: wrap; /* pour mobile */
     }
 
     .section h2 {
@@ -51,20 +48,21 @@
   </style>
 </head>
 <body>
-  <!-- Logo seul -->
+
+  <!-- Logo en haut -->
   <h1><img src="P_LOGO.jpg" alt="PÉNOMBRE Logo"></h1>
 
-  <!-- Sections côte à côte sous le logo -->
+  <!-- Sections côte à côte -->
   <div class="sections">
     <div class="section">
       <h2>Albums</h2>
       <a href="https://music.youtube.com/channel/UCPf29ha3UW5Pm46z0YxM7dQ?si=APsUaEurV_WqCdaE" target="_blank">YOUTUBE</a>
     </div>
-
     <div class="section">
       <h2>Poésie</h2>
       <a href="https://cernesciment.tumblr.com/">TUMBLR</a>
     </div>
   </div>
+
 </body>
 </html>
