@@ -11,7 +11,7 @@
       text-align: center; 
       padding: 50px; 
       text-transform: uppercase; /* tout en CAPS LOCK */
-      font-size: 14px; /* taille petite, tu peux ajuster */
+      font-size: 14px; /* taille petite */
     }
 
     /* Logo */
@@ -19,13 +19,17 @@
       height: 200px;
     }
 
-    /* Container pour les sections côte à côte */
+    /* Container pour toutes les sections côte à côte */
     .sections {
       display: flex;
       justify-content: center;
       gap: 50px; /* espace entre les blocs */
       margin-top: 50px;
       flex-wrap: wrap; /* pour mobile */
+    }
+
+    .section {
+      text-align: center;
     }
 
     .section h2 {
@@ -56,7 +60,7 @@
   <!-- Logo en haut -->
   <h1><img src="P_LOGO.jpg" alt="PÉNOMBRE Logo"></h1>
 
-  <!-- Sections côte à côte -->
+  <!-- Sections côte à côte incluant Contact -->
   <div class="sections">
     <div class="section">
       <h2>Albums</h2>
@@ -65,6 +69,10 @@
     <div class="section">
       <h2>Poésie</h2>
       <a href="https://cernesciment.tumblr.com/">TUMBLR</a>
+    </div>
+    <div class="section">
+      <h2>Contact</h2>
+      <a href="mailto:penombre.qc@gmail.com">E-MAIL</a>
     </div>
   </div>
 
