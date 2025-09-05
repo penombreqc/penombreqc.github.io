@@ -9,73 +9,64 @@
   <style>
     body { 
       font-family: Arial, sans-serif; 
-      background: #000000; 
+      background: #000; 
       color: #f1f1f1; 
       text-align: center; 
-      padding: 50px; 
+      padding: 5vw; /* padding proportionnel à l'écran */
       text-transform: uppercase;
-      font-size: 14px;
     }
 
     h1 img {
-      height: 200px;
-      max-width: 90%; /* pour s’adapter aux petits écrans */
+      height: auto;
+      width: 50vw; /* logo prend 50% de la largeur de l'écran */
+      max-width: 300px; /* limite maximale */
     }
 
     .sections {
       display: flex;
       justify-content: center;
-      gap: 50px;
-      margin-top: 50px;
+      gap: 5vw; /* espace proportionnel */
+      margin-top: 5vw;
       flex-wrap: wrap;
     }
 
     .section {
       text-align: center;
+      flex: 1 1 30vw; /* chaque bloc prend 30% de l’écran mais s’adapte */
+      min-width: 150px; /* largeur minimale */
     }
 
     .section h2 {
-      margin-bottom: 20px;
-      font-size: 14px;
+      margin-bottom: 1vw;
+      font-size: 4vw; /* texte responsive */
     }
 
     a { 
       display: block; 
-      margin: 10px auto; 
-      padding: 15px; 
+      margin: 1vw auto; 
+      padding: 2vw; 
+      width: 80%; /* bouton s'étend proportionnellement */
       max-width: 200px;
       border: 2px solid #f1f1f1; 
       text-decoration: none; 
       color: #f1f1f1; 
       transition: 0.3s; 
-      text-transform: uppercase; 
-      font-size: 12px;
+      text-transform: uppercase;
+      font-size: 3vw; /* bouton responsive */
+      box-sizing: border-box;
     }
 
     a:hover { 
       background: #f1f1f1; 
-      color: #0a0a0a; 
+      color: #000; 
     }
 
-    /* Media query pour mobiles */
-    @media (max-width: 600px) {
-      body {
-        font-size: 16px; /* texte un peu plus grand */
-        padding: 20px;
-      }
-
+    @media (min-width: 768px) {
       .section h2 {
-        font-size: 16px;
+        font-size: 1.2em; /* sur grand écran texte normal */
       }
-
       a {
-        font-size: 14px; /* boutons plus grands sur mobile */
-        max-width: 90%; /* boutons s’adaptent à la largeur */
-        padding: 12px;
-      }
-
-      .sections {
-        gap: 20px; /* moins d’espace entre les blocs sur mobile */
+        font-size: 14px; /* bouton normal sur desktop */
       }
     }
   </style>
