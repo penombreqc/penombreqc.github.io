@@ -5,14 +5,14 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <title>Discographie — Pénombre</title>
 <style>
-body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; background: #000000; color: #bcdcff; line-height: 1.6; }
-header { position: sticky; top: 0; background: #000; border-bottom: 1px solid #08121a; padding: 1rem; z-index: 1000; }
-header h1 { color: #4fa3ff; text-align: left; margin: 0; font-size: 1.4rem; letter-spacing: 1px; }
-nav { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 1rem; margin-top: 0.6rem; }
-nav a { color: #bcdcff; text-decoration: none; font-size: 0.95rem; padding: 0.25rem 0.4rem; }
-nav a:hover { color: #000; background: #4fa3ff; border-radius: 4px; }
-section { padding: 2rem 1rem; max-width: 1000px; margin: auto; border-bottom: 1px solid #08121a; }
-section h2 { color: #4fa3ff; border-bottom: 1px solid #08121a; padding-bottom: 0.3rem; margin-bottom: 0.3rem; }
+body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; background: #000; color: #bcdcff; line-height: 1.6; display: flex; }
+nav.sidebar { position: fixed; top: 0; left: 0; width: 240px; height: 100%; background: #000; border-right: 1px solid #08121a; padding: 2rem 1rem; overflow-y: auto; }
+nav.sidebar h1 { color: #4fa3ff; font-size: 1.4rem; margin-bottom: 2rem; letter-spacing: 1px; }
+nav.sidebar a { display: block; color: #4fa3ff; text-decoration: none; margin-bottom: 0.75rem; font-size: 0.95rem; transition: color 0.2s ease; }
+nav.sidebar a:hover { color: #89caff; }
+main { margin-left: 260px; padding: 2rem 1.5rem; max-width: 1000px; }
+section { margin-bottom: 3rem; }
+section h2 { color: #4fa3ff; border-bottom: 1px solid #08121a; padding-bottom: 0.3rem; margin-bottom: 0.5rem; }
 .song-title { color: #4fa3ff; font-weight: 600; margin: 1.2rem 0 0.4rem 0; }
 pre.lyrics { white-space: pre-wrap; font-family: inherit; background: #02060a; padding: 1rem; border-radius: 6px; color: #cfe9ff; overflow-x: auto; margin-bottom: 1.2rem; }
 hr.sep { border: 0; height: 1px; background: linear-gradient(90deg, transparent, #073951, #4fa3ff, #073951, transparent); margin: 1.2rem 0; }
@@ -20,20 +20,19 @@ footer { text-align: center; padding: 2rem; color: #698fb0; font-size: 0.85rem; 
 </style>
 </head>
 <body>
-<header>
-<h1>Discographie — Pénombre</h1>
-<nav>
-<a href="#méphistophélès-ou-le-diable-sur-terre">Méphistophélès (ou le Diable sur Terre) (2017)</a>
-<a href="#bašmu-pénombre">Bašmu / Pénombre (2019)</a>
-<a href="#grande-flamme">Grande flamme (2021)</a>
-<a href="#lueur-noire">Lueur noire (2023)</a>
-<a href="#le-silence-c-est-le-bonheur">Le silence c’est le bonheur (2023)</a>
-<a href="#contre-vous">Contre vous (2023)</a>
-<a href="#totem-ferraille">Totem ferraille (2024)</a>
-<a href="#je-pleure-un-pays-que-vous-ne-voyez-pas">Je pleure un pays que vous ne voyez pas (2024)</a>
+<nav class='sidebar'>
+<h1>PÉNOMBRE</h1>
 <a href="#un-monde-de-fou">Un monde de fou (2025)</a>
+<a href="#je-pleure-un-pays-que-vous-ne-voyez-pas">Je pleure un pays que vous ne voyez pas (2024)</a>
+<a href="#totem-ferraille">Totem ferraille (2024)</a>
+<a href="#contre-vous">Contre vous (2023)</a>
+<a href="#le-silence-c-est-le-bonheur">Le silence c’est le bonheur (2023)</a>
+<a href="#lueur-noire">Lueur noire (2023)</a>
+<a href="#grande-flamme">Grande flamme (2021)</a>
+<a href="#bašmu-pénombre">Bašmu / Pénombre (2019)</a>
+<a href="#méphistophélès-ou-le-diable-sur-terre">Méphistophélès (ou le Diable sur Terre) (2017)</a>
 </nav>
-</header>
+<main>
 <section id='méphistophélès-ou-le-diable-sur-terre'>
 <h2>Méphistophélès (ou le Diable sur Terre) (2017)</h2>
 <div class='song'><div class='song-title'>Méphistophélès — 05:25</div><pre class='lyrics'>J’ai chevauché le temps et à travers les siècles
@@ -1289,5 +1288,6 @@ L&#x27;épicarpe des saints
 façonné par la tranquillité</pre><hr class='sep' /></div>
 </section>
 <footer><p>&copy; Pénombre — Tous droits réservés.</p></footer>
+</main>
 </body>
 </html>
