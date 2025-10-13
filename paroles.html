@@ -5,22 +5,125 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <title>Discographie — Pénombre</title>
 <style>
-body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; background: #000; color: #bcdcff; line-height: 1.6; display: flex; }
-nav.sidebar { position: fixed; top: 0; left: 0; width: 260px; height: 100%; background: #000; border-right: 1px solid #08121a; padding: 2rem 1rem; overflow-y: auto; }
-nav.sidebar h1 { color: #4fa3ff; font-size: 1.5rem; margin-bottom: 1.5rem; letter-spacing: 2px; text-transform: uppercase; }
-nav.sidebar a { display: block; color: #4fa3ff; text-decoration: none; margin-bottom: 0.75rem; font-size: 0.95rem; transition: color 0.2s ease; }
-nav.sidebar a:hover { color: #89caff; }
-main { margin-left: 280px; padding: 2rem 1.5rem; max-width: 1000px; }
-section { margin-bottom: 3rem; }
-section h2 { color: #4fa3ff; border-bottom: 1px solid #08121a; padding-bottom: 0.3rem; margin-bottom: 0.5rem; }
-.song-title { color: #4fa3ff; font-weight: 700; margin: 1.2rem 0 0.4rem 0; font-size: 1.05rem; }
-.song-meta { color: #89b6ff; font-size: 0.95rem; margin-bottom: 0.4rem; }
-pre.lyrics { white-space: pre-wrap; font-family: inherit; background: #02060a; padding: 1rem; border-radius: 6px; color: #cfe9ff; overflow-x: auto; margin-bottom: 1.2rem; }
-hr.sep { border: 0; height: 1px; background: linear-gradient(90deg, transparent, #073951, #4fa3ff, #073951, transparent); margin: 1.2rem 0; }
-footer { text-align: center; padding: 2rem; color: #698fb0; font-size: 0.85rem; }
+body {
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+}
+nav.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: #000;
+  border-right: 1px solid #222;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+nav.sidebar h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+nav.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+nav.sidebar a:hover {
+  color: #ccc;
+}
+main {
+  margin-left: 280px;
+  padding: 2rem 1.5rem;
+  max-width: 1000px;
+}
+section {
+  margin-bottom: 3rem;
+}
+section h2 {
+  color: #fff;
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.song-title {
+  color: #fff;
+  font-weight: 700;
+  margin: 1.2rem 0 0.4rem 0;
+  font-size: 1.05rem;
+}
+.song-meta {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+pre.lyrics {
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  background: #111;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #eee;
+  overflow-x: auto;
+  margin-bottom: 1.2rem;
+}
+hr.sep {
+  border: 0;
+  height: 1px;
+  background: #333;
+  margin: 1.2rem 0;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+/* Mobile Styles */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  border-radius: 6px;
+}
+@media (max-width: 768px) {
+  nav.sidebar {
+    transform: translateX(-100%);
+  }
+  nav.sidebar.open {
+    transform: translateX(0);
+  }
+  main {
+    margin-left: 0;
+    padding-top: 4rem;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
 </style>
 </head>
 <body>
+<button class='menu-toggle'>☰</button>
 <nav class='sidebar'><h1>PÉNOMBRE</h1>
 <a href='#un-monde-de-fou'>Un monde de fou (2025)</a>
 <a href='#je-pleure-un-pays-que-vous-ne-voyez-pas'>Je pleure un pays que vous ne voyez pas (2024)</a>
@@ -1190,5 +1293,16 @@ façonné par la tranquillité</pre>
 <hr class='sep' /></div>
 </section>
 </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.menu-toggle');
+  const sidebar = document.querySelector('nav.sidebar');
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+});
+</script>
+
 </body>
 </html>
